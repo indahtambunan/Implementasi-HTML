@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Tambah Data</title>
+  <link rel="stylesheet" href="Tambah.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <div class="topnav">
+   <a href="home.html"> <font color="red";font-family="san-serif";font-size="24pt">CheapTravel</font></a>
+   <a href="about.html">Tentang</a>
+   <a href="kontak.html">Kontak</a>
+   <a href="bantuan.html">Bantuan</a>
+   <div class="search-container">
+    <form action="/action_page_php">
+	<input type="text" placeholder="search.." name="search">
+	<button type="submit"><i class="fa fa-search"></i></button>
+	</form>
+   </div>
+  </div>
+
+ <div class="nav">
+   <a href="home.html">Beranda</a>
+   <a href="paketTour.html">Paket Tour</a>
+   <a href="Hotel1.html">Hotel</a>
+   <a href="Pesawat1.html">Pesawat</a>
+ </div>
+
+<br>
+
+<center><h1>Tambah Data</h1></center>
+
+<div class="row">
+  <div class="col-12">
+    <div class="tab">
+     <button class="tablinks" onclick="Data(event, 'Paket Tour')">Data Paket Tour</button>
+     <button class="tablinks" onclick="Data(event, 'Pesawat')">Data Pesawat</button>
+     <button class="tablinks" onclick="Data(event, 'Hotel')">Data Hotel</button>
+    </div>
+
+   <div id="Paket Tour" class="tabcontent">
+     <div class="form">
+           <form class="form-inline" action="#">
+             <label for="nama">Nama Paket Tour</label><br>
+             <input type="text" name="nama" placeholder="Nama Paket Tour" size="50px"><br><br>
+             <label for="deskripsi">Deskripsi</label><br>
+             <textarea name="deskripsi" rows="8" cols="80"></textarea><br><br>
+             <label for="rute">Rute Perjalanan</label><br>
+             <textarea name="deskripsi" rows="8" cols="80"></textarea><br><br>
+             <label for="itinerary">Itinenary</label><br>
+             <textarea name="itinerary" rows="8" cols="80"></textarea><br><br>
+             <label for="berangkat">Tanggal Berangkat</label><br>
+             <input type="date" name="berangkat"><br><br>
+             <label for="selesai">Tanggal Selesai</label><br>
+             <input type="date" name="selesai"><br><br>
+             <label for="harga">Harga</label><br>
+             <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
+             <label for="gambar">Gambar</label><br>
+             <div class="btn btn-primary">
+                <input type="file" id="imageBrowes"/>
+              </div>
+                <div id="imgPreview" class="thumbnail" style="display:none">
+                   <img class="img-responsive" id="targetImg" /> 
+                   <div class="caption">
+                     <span id="description"></span>
+                   </div>
+             
+             
+                </div>
+             <a href="#"</a><button type="button" name="button">Simpan</button>
+             <a href="#"</a><button type="button" name="button">Batal</button>
+
+           </form>
+     </div>
+   </div>
+
+   <div id="Pesawat" class="tabcontent">
+     <div class="form">
+           <form class="form" action="#">
+             <label for="nama">Nama Maskapai</label><br>
+             <input type="text" name="nama" placeholder="Nama Maskapai" size="50px"><br><br>
+             <label for="dari">Dari</label><br>
+             <input type="text" name="dari" placeholder="Asal" size="50px"><br><br>
+             <label for="ke">Ke</label><br>
+             <input type="text" name="tujuan" placeholder="Tujuan" size="50px"><br><br>
+             <label for="berangkat">Jam Berangkat</label><br>
+             <input type="text" name="berangkat" placeholder="Jam Berangkat" size="50px"><br><br>
+             <label for="tiba">Jam Tiba</label><br>
+             <input type="text" name="tiba" placeholder="Jam Tiba" size="50px"><br><br>
+             <label for="harga">Harga</label><br>
+             <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
+             <label for="gambar">Gambar</label><br>
+             <div class="btn btn-primary">
+              <input type="file" id="imageBrowes"/>
+              </div>
+                <div id="imgPreview" class="thumbnail" style="display:none">
+                   <img class="img-responsive" id="targetImg" /> 
+                   <div class="caption">
+                     <span id="description"></span>
+                   </div>
+             
+             
+                </div>
+             <a href="#"</a><button type="button" name="button">Simpan</button>
+             <a href="#"</a><button type="button" name="button">Batal</button>
+           </form>
+     </div>
+   </div>
+
+   <div id="Hotel" class="tabcontent">
+     <div class="form">
+           <form class="form-inline" action="#">
+             <label for="nama">Nama Hotel</label><br>
+             <input type="text" name="nama" placeholder="Nama Hotel" size="50px"><br><br>
+             <label for="kota">Kota</label><br>
+             <input type="text" name="kota" placeholder="Nama Kota" size="50px"><br><br>
+             <label for="provinsi">Provinsi</label><br>
+             <input type="text" name="provinsi" placeholder="Nama Provinsi" size="50px"><br><br>
+             <label for="harga">Harga</label><br>
+             <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
+             <label for="gambar">Gambar</label><br>
+             <div class="btn btn-primary">
+              <input type="file" id="imageBrowes"/>
+              </div>
+                <div id="imgPreview" class="thumbnail" style="display:none">
+                   <img class="img-responsive" id="targetImg" /> 
+                   <div class="caption">
+                     <span id="description"></span>
+                   </div>
+             
+             
+                </div>
+             <a href="#"</a><button type="button" name="button">Simpan</button>
+             <a href="#"</a><button type="button" name="button">Batal</button>
+           </form>
+     </div>
+   </div>
+  </div>
+
+</div>
+
+
+
+ <script>
+ function Data(evt, cityName) {
+   var i, tabcontent, tablinks;
+   tabcontent = document.getElementsByClassName("tabcontent");
+   for (i = 0; i < tabcontent.length; i++) {
+     tabcontent[i].style.display = "none";
+   }
+   tablinks = document.getElementsByClassName("tablinks");
+   for (i = 0; i < tablinks.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" active", "");
+   }
+   document.getElementById(cityName).style.display = "block";
+   evt.currentTarget.className += " active";
+   }
+
+   // Get the element with id="defaultOpen" and click on it
+   document.getElementById("defaultOpen").click();
+ </script>
+
+<script src="tambah.js"></script>
+<script>
+ $(document).ready(function(){
+   $("#imageBrowes").change(function(){
+     var File = this.files;
+
+     if(File && File[0]){
+       ReadImage(File[0]);
+
+     }
+     
+   })
+ })
+
+ var ReadImage=function(file){
+   var reader = new FileReader;
+   var image = new Image;
+
+   reader.readAsDataURL(file);
+   reader.onload= function(_file){
+
+     image.src=_file.target.result;
+     image.onload=function(){
+
+       var height = this.height;
+       var width = this.width;
+       var type = file.type;
+       var size = ~~(file.size / 1024) + "KB";
+
+         
+       $("#targetImg").attr('src',_file.target.result);
+       $("#description").text("Size:" + size + ", " + height + " X " + width + ", " + type + "");
+       $("#imgPreview").show();
+
+     }
+
+
+   }
+
+ }
+ var clearPreview = function(){
+   $("#imageBrowes").val('')
+   $("#description").text('');
+   $("#imgPreview").hide();
+
+
+ }
+
+</script>
+
+</body>
+</html>
