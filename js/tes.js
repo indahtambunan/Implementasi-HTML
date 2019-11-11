@@ -63,23 +63,6 @@ function Data(evt, cityName) {
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 
-//   function validateForm() {
-//     var name = document.forms["form-inline"]["nama"].value;
-//     var des = document.forms["form-inline"]["deskripsi"].value;
-//     var rute = document.forms["form-inline"]["rute"].value;
-//     var ite = document.forms["form-inline"]["itinenary"].value;
-//     var harga = document.forms["form-inline"]["harga"].value;
-//     var x = [];
-//     x[0] = var name;
-//     for (var i = 0, len = arr.length; i < len; i++) {
-//      var x = name
-// };
-//     if (x == "") {
-//       alert("Name must be filled out");
-//       return false;
-//     }
-//   }
-
 function validateForm() {
 
     var inputs, index;
