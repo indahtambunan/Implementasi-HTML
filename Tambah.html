@@ -23,7 +23,7 @@
 
  <div class="nav">
    <a href="home.html">Beranda</a>
-   <a href="pakettour.html">Paket Tour</a>
+   <a href="paketTour.html">Paket Tour</a>
    <a href="Hotel1.html">Hotel</a>
    <a href="Pesawat1.html">Pesawat</a>
  </div>
@@ -35,31 +35,41 @@
 <div class="row">
   <div class="col-12">
     <div class="tab">
-     <button class="tablinks" onclick="Data(event, 'Paket Tour')">Data Paket Tour</button>
+     <button class="tablinks" onclick="Data(event, 'Paket Tour')" id="defaultOpen">Data Paket Tour</button>
      <button class="tablinks" onclick="Data(event, 'Pesawat')">Data Pesawat</button>
      <button class="tablinks" onclick="Data(event, 'Hotel')">Data Hotel</button>
     </div>
 
    <div id="Paket Tour" class="tabcontent">
      <div class="form">
-           <form class="form-inline" action="#">
+           <form name="form-inline" action="#" onsubmit="return validateForm()">
              <label for="nama">Nama Paket Tour</label><br>
-             <input type="text" name="nama" placeholder="Nama Paket Tour" size="50px"><br><br>
+             <input type="text" name="namatour" placeholder="Nama Paket Tour" size="50px" id="inputtour"><br><br>
              <label for="deskripsi">Deskripsi</label><br>
-             <textarea name="deskripsi" rows="8" cols="80"></textarea><br><br>
+             <textarea name="deskripsitour" rows="8" cols="80" id="inputtour"></textarea><br><br>
              <label for="rute">Rute Perjalanan</label><br>
-             <textarea name="deskripsi" rows="8" cols="80"></textarea><br><br>
+             <textarea name="rute" rows="8" cols="80" id="inputtour"></textarea><br><br>
              <label for="itinerary">Itinenary</label><br>
-             <textarea name="itinerary" rows="8" cols="80"></textarea><br><br>
+             <textarea name="itinerary" rows="8" cols="80" id="inputtour"></textarea><br><br>
              <label for="berangkat">Tanggal Berangkat</label><br>
              <input type="date" name="berangkat"><br><br>
              <label for="selesai">Tanggal Selesai</label><br>
              <input type="date" name="selesai"><br><br>
              <label for="harga">Harga</label><br>
-             <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
-             <label for="gambar">Gambar</label><br>
-             <input type="file" name="gambar" value=""><br><br>
-             <a href="#"</a><button type="button" name="button">Simpan</button>
+             <input type="text" name="hargatour" placeholder="Harga" size="50px" id="inputtour"><br><br>
+             <label for="gambartour">Gambar</label><br>
+             <div class="btn btn-primary">
+                <input type="file" id="imageBrowes"/>
+              </div>
+                <div id="imgPreview" class="thumbnail" style="display:none">
+                   <img class="img-responsive" id="targetImg" />
+                   <div class="caption">
+                     <span id="description"></span>
+                   </div>
+
+
+                </div>
+             <a href="#"</a><button type="submit" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
 
            </form>
@@ -82,7 +92,17 @@
              <label for="harga">Harga</label><br>
              <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
              <label for="gambar">Gambar</label><br>
-             <input type="file" name="gambar" value=""><br><br>
+             <div class="btn btn-primary">
+              <input type="file" id="imageBrowes"/>
+              </div>
+                <div id="imgPreview" class="thumbnail" style="display:none">
+                   <img class="img-responsive" id="targetImg" />
+                   <div class="caption">
+                     <span id="description"></span>
+                   </div>
+
+
+                </div>
              <a href="#"</a><button type="button" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
            </form>
@@ -101,7 +121,17 @@
              <label for="harga">Harga</label><br>
              <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
              <label for="gambar">Gambar</label><br>
-             <input type="file" name="gambar" value=""><br><br>
+             <div class="btn btn-primary">
+              <input type="file" id="imageBrowes"/>
+              </div>
+                <div id="imgPreview" class="thumbnail" style="display:none">
+                   <img class="img-responsive" id="targetImg" />
+                   <div class="caption">
+                     <span id="description"></span>
+                   </div>
+
+
+                </div>
              <a href="#"</a><button type="button" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
            </form>
@@ -113,24 +143,9 @@
 
 
 
- <script>
- function Data(evt, cityName) {
-   var i, tabcontent, tablinks;
-   tabcontent = document.getElementsByClassName("tabcontent");
-   for (i = 0; i < tabcontent.length; i++) {
-     tabcontent[i].style.display = "none";
-   }
-   tablinks = document.getElementsByClassName("tablinks");
-   for (i = 0; i < tablinks.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" active", "");
-   }
-   document.getElementById(cityName).style.display = "block";
-   evt.currentTarget.className += " active";
-   }
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/tes.js"></script>
 
-   // Get the element with id="defaultOpen" and click on it
-   document.getElementById("defaultOpen").click();
- </script>
 
 </body>
 </html>
