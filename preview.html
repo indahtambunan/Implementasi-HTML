@@ -3,7 +3,7 @@
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Tambah Data</title>
-  <link rel="stylesheet" href="Tambah.css">
+  <link rel="stylesheet" href="css/Tambah.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -62,12 +62,12 @@
                 <input type="file" id="imageBrowes"/>
               </div>
                 <div id="imgPreview" class="thumbnail" style="display:none">
-                   <img class="img-responsive" id="targetImg" /> 
+                   <img class="img-responsive" id="targetImg" />
                    <div class="caption">
                      <span id="description"></span>
                    </div>
-             
-             
+
+
                 </div>
              <a href="#"</a><button type="button" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
@@ -96,12 +96,12 @@
               <input type="file" id="imageBrowes"/>
               </div>
                 <div id="imgPreview" class="thumbnail" style="display:none">
-                   <img class="img-responsive" id="targetImg" /> 
+                   <img class="img-responsive" id="targetImg" />
                    <div class="caption">
                      <span id="description"></span>
                    </div>
-             
-             
+
+
                 </div>
              <a href="#"</a><button type="button" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
@@ -125,12 +125,12 @@
               <input type="file" id="imageBrowes"/>
               </div>
                 <div id="imgPreview" class="thumbnail" style="display:none">
-                   <img class="img-responsive" id="targetImg" /> 
+                   <img class="img-responsive" id="targetImg" />
                    <div class="caption">
                      <span id="description"></span>
                    </div>
-             
-             
+
+
                 </div>
              <a href="#"</a><button type="button" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
@@ -172,7 +172,7 @@
        ReadImage(File[0]);
 
      }
-     
+
    })
  })
 
@@ -191,7 +191,7 @@
        var type = file.type;
        var size = ~~(file.size / 1024) + "KB";
 
-         
+
        $("#targetImg").attr('src',_file.target.result);
        $("#description").text("Size:" + size + ", " + height + " X " + width + ", " + type + "");
        $("#imgPreview").show();

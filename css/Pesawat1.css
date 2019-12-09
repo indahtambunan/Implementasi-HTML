@@ -11,9 +11,12 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+* {box-sizing: border-box;}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../img/background.jpg");
 }
 
 .topnav {
@@ -29,7 +32,6 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  float: left;
 }
 
 .topnav a:hover {
@@ -94,7 +96,7 @@ body {
   float: left;
   display: block;
   color: black;
-  text-align: left;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -120,15 +122,16 @@ body {
   font-size: 17px;
   border: none;
 }
-.navbar button{
-  float: right;
-  color:plum;
-}
 
 * {
   box-sizing: border-box;
 }
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 [class*="col-"] {
   float: left;
@@ -136,56 +139,46 @@ body {
   background-color: white;
 }
 
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.menu li:hover {
-  background-color: #0099cc;
-}
-
-.bgimg {
-    background-image: url('background.jpg');
-    padding: 200px;
-    margin:0px ;
-}
-
 a {
   color: black;
   text-decoration: none;
 }
 
-.content{
-  margin-left: 300px;
-  margin-right: 50px;
-  text-align: center;
-  margin-top: -155px;
-  overflow: hidden;
-  word-spacing: 90px;
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
 }
-.content-menu{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #ddd;
-}
-.col-md-9 no-padding{
-  border-left: 1px solid;
 
+.form-inline label {
+  margin: 5px 10px 5px 0;
 }
-.panel {
-  background: #2196F3;
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
 }
-.nama a{
-  border-top-style: unset;;
-  float:right;
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: orange;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: yellow;
+}
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.checkbox {
+  float: left;
 }

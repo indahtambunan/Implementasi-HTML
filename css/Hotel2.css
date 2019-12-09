@@ -16,7 +16,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("background.jpg");
+  background-image: url("../img/background.jpg");
 }
 
 .topnav {
@@ -122,10 +122,6 @@ body {
   font-size: 17px;
   border: none;
 }
-.navbar button{
-  float: right;
-  color: plum;
-}
 
 * {
   box-sizing: border-box;
@@ -142,24 +138,6 @@ body {
   padding: 15px;
   background-color: white;
   margin-bottom: 10px;
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.menu li:hover {
-  background-color: #0099cc;
 }
 
 a {
@@ -201,14 +179,16 @@ a {
     flex-direction: column;
     align-items: stretch;
   }
-
+}
 
 .content {
   display: inline-block;
+  float: left;
 }
 
 .text {
   display: inline-block;
+  float: left;
 }
 
 img {
@@ -216,24 +196,47 @@ img {
   margin-right: 10px
 }
 
-.search-container{
-  top: 5px;
+h1 {
+  margin-left: 15px;
 }
 
-.search-container input[type="text"]{
-  margin-top: 20px;
-  margin-left: -1px;
-  width: 500px;
-  height: 25px;
+h3 {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: blue;
 }
 
-.content{
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 100px;
-  text-align: center;
-  margin-top: 10px;
-  background-color: rgba(230, 219, 219, 0.404);
+.checked {
+  color: orange;
+}
+
+.fa fa-star {
+  margin: 0;
+}
+
+.harga {
+  float: right;
+  margin: 0px;
+  color: orange;
+  font-size: 20px;
+}
+
+.malam {
+  float: right;
+  margin: 0px;
+  text-align: right;
+}
+
+.content button {
+  padding: 10px 20px;
+  background-color: orange;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  float: right;
+  margin-top: 5px;
+}
+
+.tanggal {
+  margin-left: 15px;
 }
