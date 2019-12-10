@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <style type="text/css">
+      .main-body{
+        display: table;
+        width: 100%;
+      }
+  
+      .wrapper{
+        padding: 10px;
+      }
+  
+      #form_wrap{
+        width: 100%;
+        margin-top: 25px;
+      }
+  
+      #form_pesan{
+        width: 50%;
+        margin: auto;
+        padding: 20px;
+        overflow: hidden;
+        background-color: rgba(245, 245, 245, 0.6);
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
+      }
+  
+      table{
+        width: 100%;
+        padding: 5px;
+      }
+  
+      td{
+        padding: 10px;
+      }
+  
+      td input, td select, td textarea{
+        padding: 5px;
+        width: 100%;
+        border: none;
+      }
+  
+      #btn_submit{
+        float: right;
+        margin-top: 20px;
+      }
+  
+      @media only screen and (max-width: 1000px){
+        #form_pesan{
+          width: 80%;
+        }
+      }
+  
+      @media only screen and (max-width: 768px){
+        #form_pesan{
+          width: 100%;
+        }
+      }
+    </style>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>informasi pemesanan</title>
+  <link rel="stylesheet" href="Pemesanan3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <div class="topnav">
+   <a href="home.html"> <font color="red";font-family="san-serif";font-size="24pt">CheapTravel</font></a>
+   <a href="about.html">Tentang</a>
+   <a href="kontak.html">Kontak</a>
+   <a href="bantuan.html">Bantuan</a>
+   
+
+	</form>
+   </div>
+  </div>
+
+ <div class="nav">
+   <a href="home.html">Beranda</a>
+   <a href="paketTour.html">Paket Tour</a>
+   <a href="Hotel1.html">Hotel</a>
+   <a href="Pesawat1.html">Pesawat</a>
+ </div>
+
+<!-- <div class="bgimg"> -->
+  <div class="main-body">
+    <div id="open_sideMenu">
+      <button id="btn_openSide" class="btn btn_utama"><i class="fas fa-caret-right"></i></button>
+    </div>
+
+    <div class="main-content">
+      <div class="wrapper">
+
+        <div class="judul_atas">
+          <center><h1>Informasi Pemesanan</h1></Center>
+        </div>
+
+        <div id="form_wrap">
+          <form id="form_pesan" action="Login.html">
+            <table>
+              <tr>
+                <td>Nama Penumpang</td>
+                <td> <input type="text" name="nama_penumpang" ></td>
+              </tr>
+
+              <tr>
+                  <td>Jumlah Package</td>
+                  <td>
+                    <input type="number" name="jml_package" min="1">
+                  </td>
+              </tr>
+
+              <tr>
+                  <td>Tanggal Mulai</td>
+                  <td>
+                    <input type="date" name="tgl_mulai">
+                  </td>
+              </tr>
+
+              <tr>
+                <td>Nama Package</td>
+                <td>
+                  <select name="mata_pelajaran">
+                    <option value=""> --Pilih-- </option>
+                    <option value="Keluarga">Keluarga</option>
+                    <option value="Gunung">Gunung</option>
+                    <option value="Pantai">Pantai</option>
+                    <option value="Taman Hiburan">Tama Hiburan</option>
+                    <option value="Bulan Madu">Bulan Madu</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Harga</td>
+                <td>
+                  <input type="money" name="harga">
+                </td>
+              </tr>
+
+
+            </table>
+
+            <div id="btn_submit">
+              <button type="submit" class="btn btn_utama" id="submit_pesan">Pesan</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+      
+    
+
+</body>
+</html>

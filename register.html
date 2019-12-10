@@ -50,6 +50,24 @@
   </div>
 </div>
 
+<div class="error" id="popup_error">
+  <div class="error_content">
+    <div class="error_top">
+      <h3>Warning !!!</h3>
+    </div>
+
+    <div class="error_middle">
+      <b></b>
+    </div>
+
+    <div class="error_bottom">
+      <button class="btn" id="close_error_form">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+
 
  <!-- <div class="row"> -->
    <div class="col-4 menu">
@@ -119,20 +137,10 @@
   </form>
 </div>
 
-<script>
-var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Tidak Cocok");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
-
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/tes.js"></script>
+<script type="text/javascript">min.js
+  $('form').validasiRegister();
 </script>
 
 </body>
