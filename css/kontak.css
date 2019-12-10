@@ -11,9 +11,12 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+* {box-sizing: border-box;}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../img/background.jpg");
 }
 
 .topnav {
@@ -29,7 +32,6 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  float: left;
 }
 
 .topnav a:hover {
@@ -94,7 +96,7 @@ body {
   float: left;
   display: block;
   color: black;
-  text-align: left;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -122,18 +124,24 @@ body {
 }
 .navbar button{
   float: right;
-  color:plum;
+  color: plum;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 [class*="col-"] {
   float: left;
   padding: 15px;
   background-color: white;
+  margin-bottom: 10px;
 }
 
 .menu ul {
@@ -154,13 +162,80 @@ body {
   background-color: #0099cc;
 }
 
-.bgimg {
-    background-image: url('background.jpg');
-    padding: 200px;
-    margin:0px ;
-}
-
 a {
   color: black;
   text-decoration: none;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+.content {
+  display: inline-block;
+
+}
+
+.text {
+  display: inline-block;
+}
+
+img {
+  float: left;
+  margin-right: 10px
+}
+
+.search-container{
+  top: 5px;
+}
+
+.search-container input[type="text"]{
+  margin-top: 20px;
+  margin-left: -1px;
+  width: 800px;
+  height: 25px;
+}
+
+.content{
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-left: 100px;
+  padding-right: 30px;
+  padding-bottom: 100px;
+  text-align: center-left;
+  text-align-last: center;
+  margin-top: 10px;
+  background-color: rgba(230, 219, 219, 0.404);
 }

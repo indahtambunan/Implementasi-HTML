@@ -11,12 +11,9 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-* {box-sizing: border-box;}
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("background.jpg");
 }
 
 .topnav {
@@ -32,6 +29,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  float: left;
 }
 
 .topnav a:hover {
@@ -96,7 +94,7 @@ body {
   float: left;
   display: block;
   color: black;
-  text-align: center;
+  text-align: left;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -122,22 +120,20 @@ body {
   font-size: 17px;
   border: none;
 }
+.navbar button{
+  float: right;
+  color:plum;
+}
 
 * {
   box-sizing: border-box;
 }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
 [class*="col-"] {
   float: left;
   padding: 15px;
   background-color: white;
-  margin-bottom: 10px;
 }
 
 .menu ul {
@@ -158,103 +154,38 @@ body {
   background-color: #0099cc;
 }
 
+.bgimg {
+    background-image: url('../img/background.jpg');
+    padding: 200px;
+    margin:0px ;
+}
+
 a {
   color: black;
   text-decoration: none;
 }
 
-.form-inline {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+.content{
+  margin-left: 300px;
+  margin-right: 50px;
+  text-align: center;
+  margin-top: -155px;
+  overflow: hidden;
+  word-spacing: 90px;
 }
-
-.form-inline label {
-  margin: 5px 10px 5px 0;
+.content-menu{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ddd;
 }
+.col-md-9 no-padding{
+  border-left: 1px solid;
 
-.form-inline input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
 }
-
-.form-inline button {
-  padding: 10px 20px;
-  background-color: dodgerblue;
-  border: 1px solid #ddd;
-  color: white;
-  cursor: pointer;
+.panel {
+  background: #2196F3;
 }
-
-.form-inline button:hover {
-  background-color: royalblue;
-}
-
-  .form-inline {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
-.content {
-  display: inline-block;
-  float: left;
-}
-
-.text {
-  display: inline-block;
-  float: left;
-}
-
-img {
-  float: left;
-  margin-right: 10px
-}
-
-h1 {
-  margin-left: 15px;
-}
-
-h3 {
-  margin-top: 0;
-  margin-bottom: 2px;
-  color: blue;
-}
-
-.checked {
-  color: orange;
-}
-
-.fa fa-star {
-  margin: 0;
-}
-
-.harga {
-  float: right;
-  margin: 0px;
-  color: orange;
-  font-size: 20px;
-}
-
-.malam {
-  float: right;
-  margin: 0px;
-  text-align: right;
-}
-
-.content button {
-  padding: 10px 20px;
-  background-color: orange;
-  border: 1px solid #ddd;
-  color: white;
-  cursor: pointer;
-  float: right;
-  margin-top: 5px;
-}
-
-.tanggal {
-  margin-left: 15px;
+.nama a{
+  border-top-style: unset;;
+  float:right;
 }

@@ -16,7 +16,6 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("background.jpg");
 }
 
 .topnav {
@@ -32,6 +31,7 @@ body {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  float: left;
 }
 
 .topnav a:hover {
@@ -137,7 +137,10 @@ body {
   float: left;
   padding: 15px;
   background-color: white;
-  margin-bottom: 10px;
+}
+
+.bgimg {
+    background-image: url('../img/background.jpg');
 }
 
 a {
@@ -145,98 +148,86 @@ a {
   text-decoration: none;
 }
 
-.form-inline {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.form-inline label {
-  margin: 5px 10px 5px 0;
-}
-
-.form-inline input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-.form-inline button {
-  padding: 10px 20px;
-  background-color: dodgerblue;
-  border: 1px solid #ddd;
-  color: white;
-  cursor: pointer;
-}
-
-.form-inline button:hover {
-  background-color: royalblue;
-}
-
-  .form-inline {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
-.content {
-  display: inline-block;
-  float: left;
-}
-
-.text {
-  display: inline-block;
-  float: left;
-}
-
-img {
-  float: left;
-  margin-right: 10px
-}
-
 h1 {
-  margin-left: 15px;
+  margin: 2px;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #F0FFF0;
+  padding-top: 50px;
+  animation: show_modal;	
+  animation-duration: 0.3s;
 }
 
-h3 {
-  margin-top: 0;
-  margin-bottom: 2px;
-  color: blue;
+.modal-content{
+background-color: #F0FFF0;
+width: 70%;
+margin: auto;
 }
 
-.checked {
-  color: orange;
+.error_top{
+padding: 2px 5px;
+background-color: #2196f3;
+color: white;
+border-radius: 2px;
+text-align: center;
 }
 
-.fa fa-star {
-  margin: 0;
+.modal-close{
+float: right;
+padding: 5px;
+font-size: 24px;
+font-weight: bold;
+font-family: Segoe UI;
+color: red;
 }
 
-.harga {
-  float: right;
-  margin: 0px;
-  color: orange;
-  font-size: 20px;
+.error_middle{
+padding: 15px;
+overflow: hidden;
+background-color: white;
 }
 
-.malam {
-  float: right;
-  margin: 0px;
-  text-align: right;
+.error_bottom button{
+padding: 10px 10px;
+margin-top: 5px;
 }
 
-.content button {
-  padding: 10px 20px;
-  background-color: orange;
-  border: 1px solid #ddd;
-  color: white;
-  cursor: pointer;
-  float: right;
-  margin-top: 5px;
+.error{
+display: none;
+position: fixed;
+left: 0;
+top: 0;
+z-index: 1;
+width: 100%; 
+  height: 100%; 
+font-size: 14px;
+overflow: auto; 
+animation: show_modal;
+animation-duration: 0.3s;
 }
 
-.tanggal {
-  margin-left: 15px;
+.error_content{	
+position: fixed;
+top: 25%;
+left: 25%;
+width: 50%;
+background-color: white;
+box-shadow: 0 5px 7px 0 rgba(0,0,0,0.5);
+border-radius: 8px;
+}
+
+.error .error_top{
+background-color: #5F9EA0;
+}
+
+.error .error_bottom button{
+float: right;
 }

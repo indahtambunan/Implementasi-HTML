@@ -1,6 +1,6 @@
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
+.col-3 {width: 25%; height: 80px;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
 .col-6 {width: 50%;}
@@ -16,6 +16,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../img/background.jpg");
 }
 
 .topnav {
@@ -136,11 +137,7 @@ body {
   float: left;
   padding: 15px;
   background-color: white;
-  margin: 0px;
-}
-
-.bgimg {
-    background-image: url('background.jpg');
+  margin-bottom: 10px;
 }
 
 a {
@@ -148,87 +145,34 @@ a {
   text-decoration: none;
 }
 
+}
+
+.content {
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+}
+
+img {
+  float: left;
+  margin-right: 10px
+}
+
 h1 {
-  margin: 2px;
-}
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: #F0FFF0;
-  padding-top: 50px;
-  animation: show_modal;	
-  animation-duration: 0.3s;
+  margin-left: 15px;
 }
 
-.modal-content{
-background-color: #F0FFF0;
-width: 70%;
-margin: auto;
+.content button {
+  padding: 10px 20px;
+  background-color: orange;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  float: right;
+  margin-top: 6px;
 }
 
-.error_top{
-padding: 2px 5px;
-background-color: #2196f3;
-color: white;
-border-radius: 2px;
-text-align: center;
+.isi {
+  vertical-align: middle;
+  text-align: center;
 }
-
-.modal-close{
-float: right;
-padding: 5px;
-font-size: 24px;
-font-weight: bold;
-font-family: Segoe UI;
-color: red;
-}
-
-.error_middle{
-padding: 15px;
-overflow: hidden;
-background-color: white;
-}
-
-.error_bottom button{
-padding: 10px 10px;
-margin-top: 5px;
-}
-
-.error{
-display: none;
-position: fixed;
-left: 0;
-top: 0;
-z-index: 1;
-width: 100%; 
-  height: 100%; 
-font-size: 14px;
-overflow: auto; 
-animation: show_modal;
-animation-duration: 0.3s;
-}
-
-.error_content{	
-position: fixed;
-top: 25%;
-left: 25%;
-width: 50%;
-background-color: white;
-box-shadow: 0 5px 7px 0 rgba(0,0,0,0.5);
-border-radius: 8px;
-}
-
-.error .error_top{
-background-color: #5F9EA0;
-}
-
-.error .error_bottom button{
-float: right;
-}
-
