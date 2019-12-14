@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>informasi pemesanan</title>
@@ -14,17 +13,18 @@
    <a href="about.html">Tentang</a>
    <a href="kontak.html">Kontak</a>
    <a href="bantuan.html">Bantuan</a>
-
-   <div class="navbar">
-    <button type="profil"><a href="profil.html">Profil</a></button>
- </div>
    
 
 	</form>
    </div>
   </div>
 
- 
+ <div class="nav">
+   <a href="home.html">Beranda</a>
+   <a href="paketTour.html">Paket Tour</a>
+   <a href="Hotel1.html">Hotel</a>
+   <a href="Pesawat1.html">Pesawat</a>
+ </div>
 
 <!-- <div class="bgimg"> -->
   <div class="main-body">
@@ -36,64 +36,69 @@
       <div class="wrapper">
 
         <div class="judul_atas">
-          <center><h1>Informasi Pemesanan</h1></Center>
+          <center><h1>Pembayaran</h1></Center>
         </div>
 
         <div id="form_wrap">
           <form id="form_pesan">
             <table>
+
               <tr>
                 <td>Nama Penumpang</td>
-                <td> <input type="text" name="nama_penumpang" ></td>
+                <td> <input type="text" name="nama_penumpang" value="mrs.haruka" ></td>
               </tr>
 
               <tr>
                   <td>Jumlah Package</td>
                   <td>
-                    <input type="number" name="jml_package" min="1">
+                    <input type="number" name="jml_package" min="1" value="1">
                   </td>
               </tr>
 
               <tr>
-                  <td>Tanggal Mulai</td>
+                  <td>Tanggal Berangkat</td>
                   <td>
-                    <input type="date" name="tgl_mulai">
+                    29 Desember 2019      
                   </td>
               </tr>
 
               <tr>
                 <td>Nama Package</td>
                 <td>
-                  <select name="nama_package">
-                    <option value=""> --Pilih-- </option>
-                    <option value="Keluarga">Keluarga</option>
-                    <option value="Gunung">Gunung</option>
-                    <option value="Pantai">Pantai</option>
-                    <option value="Taman Hiburan">Tama Hiburan</option>
-                    <option value="Bulan Madu">Bulan Madu</option>
-                  </select>
+                 Liburan Keluarga
                 </td>
               </tr>
 
               <tr>
                 <td>Harga</td>
                 <td>
-                  <input type="money" name="harga" value="Rp.2.167.000">
+                  Rp2.192.000,00
                 </td>
               </tr>
-
+              <tr>
+                <td> Transfer ke bank </td>
+                <td>
+                  <select name="bank">
+                    <option value=""> --Pilih-- </option>
+                    <option value="Keluarga">BRI</option>
+                    <option value="Gunung">BNI</option>
+                    <option value="Pantai">MANDIRI</option>
+                    <option value="Taman Hiburan">BCA</option>
+                    <option value="Bulan Madu">BTN</option>
+                  </select>
+                </td>
 
             </table>
+           
 
             <a id="btn_submit">
-              <button type="submit" class="btn btn_utama" id="submit_pesan"><a href="detail.html">Pesan</a></button>
+              <button type="submit" class="btn btn_utama" id="submit_pesan"><a href="pembayaran.html">Bayar</a></button>
             </div>
           </form>
         </div>
 
       </div>
     </div>
-
       
     
 

@@ -68,7 +68,9 @@ body {
 
 .topnav .search-container button:hover {
   background: #ccc;
+
 }
+
 
 @media screen and (max-width: 600px) {
   .topnav .search-container {
@@ -91,6 +93,7 @@ body {
   overflow: hidden;
   background-color:  #0000ff;
 }
+
 
 .nav a {
   float: left;
@@ -199,14 +202,17 @@ a {
   }
 }
 
+
 .content {
   display: inline-block;
   float: left;
+
 }
 
 .text {
   display: inline-block;
   float: left;
+
 }
 
 img {
@@ -240,12 +246,12 @@ h3 {
 }
 
 .malam {
-  float: right;
+  float: left;
   margin: 0px;
   text-align: right;
 }
 
-.content button {
+.content a button {
   padding: 10px 20px;
   background-color: orange;
   border: 1px solid #ddd;
@@ -255,6 +261,3 @@ h3 {
   margin-top: 5px;
 }
 
-.tanggal {
-  margin-left: 15px;
-}

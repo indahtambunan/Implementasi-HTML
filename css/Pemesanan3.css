@@ -92,6 +92,12 @@ body {
   background-color:  #0000ff;
 }
 
+.navbar button{
+  float: right;
+  color: antiquewhite;
+  text-decoration-color: blue;
+}
+
 .nav a {
   float: left;
   display: block;
@@ -238,8 +244,63 @@ img {
   margin-top: 10px;
   background-color:white;
 }
-.content table td button{
-    position: relative;
+.content a button{
+    position: right;
     margin-left: 100px;
+    background-color: coral;
 
+}
+.main-body{
+  display: table;
+  width: 100%;
+}
+
+.wrapper{
+  padding: 10px;
+}
+
+#form_wrap{
+  width: 100%;
+  margin-top: 25px;
+}
+
+#form_pesan{
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  overflow: hidden;
+  background-color: rgba(31, 110, 163, 0.6);
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+table{
+  width: 100%;
+  padding: 5px;
+}
+
+td{
+  padding: 10px;
+}
+
+td input, td select, td textarea{
+  padding: 5px;
+  width: 100%;
+  border: none;
+}
+
+#btn_submit{
+  float: right;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1000px){
+  #form_pesan{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  #form_pesan{
+    width: 100%;
+  }
 }
