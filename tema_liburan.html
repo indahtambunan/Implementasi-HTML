@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Tema Liburan</title>
+  <link rel="stylesheet" href="css/tema_liburan.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+ <div class="topnav">
+   <a href="home.html"> <font color="red";font-family="san-serif";font-size="24pt">CheapTravel</font></a>
+   <a href="about.html">Tentang</a>
+   <a href="kontak.html">Kontak</a>
+   <a href="bantuan.html">Bantuan</a>
+   
+
+	</form>
+   </div>
+  </div>
+
+ <div class="nav">
+   <a href="home.html">Beranda</a>
+   <a href="paketTour.html">Paket Tour</a>
+   <a href="Hotel1.html">Hotel</a>
+   <a href="Pesawat1.html">Pesawat</a>
+ </div>
+ <div class="tema_liburan">
+    <center><h3 style="text-decoration-color: blue;">Tema Liburan</h3></center>
+
+<br>
+<div class="gambar_menu" id="list_item" page="">
+    <div class="gambar">
+        <div class="item_gambar">
+            <a href="#">
+                <img src="img/keluarga.jpg" height="180px">
+            </a>
+            <div class="nama_tema">keluarga</div>
+        </div>
+    </div>
+
+    <div class="gambar">
+        <div class="item_gambar">
+            <a href="#">
+                <img src="img/themeland.jpg" height="180px">
+            </a>
+            <div class="nama_tema">themaland</div>
+        </div>
+    </div>
+
+    <div class="gambar">
+        <div class="item_gambar">
+            <a href="#">
+                <img src="img/pantai.jpg" height="180px">
+            </a>
+            <div class="nama_tema">pantai</div>
+        </div>
+    </div>
+
+    <div class="gambar">
+        <div class="item_gambar">
+            <a href="#">
+                <img src="img/gunung.jpg" height="180px">
+            </a>
+            <div class="nama_tema">gunung</div>
+        </div>
+    </div>
+
+    <div class="gambar">
+        <div class="item_gambar">
+            <a href="#">
+                <img src="img/gunung.jpg" height="180px">
+            </a>
+            <div class="nama_tema">gunung</div>
+        </div>
+    </div>
+
+    <div class="gambar">
+        <div class="item_gambar">
+            <a href="#">
+                <img src="img/pantai.jpg" height="180px">
+            </a>
+            <div class="nama_tema">pantai</div>
+        </div>
+    </div>
+
+    <div class="gambar">
+        <div class="item_gambar">
+            <a href="#">
+                <img src="img/keluarga.jpg" height="180">
+            </a>
+            <div class="nama_tema">keluarga</div>
+        </div>
+    </div>
+
+    <div class="gambar">
+        <div class="item_gambar">
+            <a href="#">
+                <img src="img/jogja.jpg" height="180">
+            </a>
+            <div class="nama_tema">museum</div>
+        </div>
+    </div>
+    <div class="all_gambar"></div>
+</div>
+<div class="btn-more" id="btn-more">
+    <a href="#">More...</a>
+</div>  
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    $("#btn-more").click(function (event) {
+        event.preventDefault();
+        var hal = $("#list_item").attr('page');
+        hal = Number(hal);
+
+        if (hal == "") {
+            hal = 1;
+        }
+        else{
+            hal+=1;
+        }
+
+        $("#list_item").attr('page', hal);
+        if (hal == 2) {
+            $("#btn-more").hide();
+        }
+
+        var path = "json/item_"+hal+".json";
+
+        $.ajax({
+            url:path,
+            type: 'GET',
+            dataType: 'json'
+        })
+        .done(function(data){
+            console.log("success");
+            var gabung = "";
+            $.each(data, function (index, val) {
+             gabung+=`
+             <div class="gambar">
+             <div class="item_gambar">
+             <a href="#.jpg">
+             <img src="`+val.img+`" height="180">
+             </a>
+             <div class="nama_tema">`+val.judul+`</div>
+             </div>
+             </div>
+             ` 
+         });
+
+            $("#list_item").append(gabung);
+        })
+        .fail(function () {
+            console.log("error");
+        });
+    })
+</script>
+
+</body>
+</html>

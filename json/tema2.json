@@ -1,0 +1,18 @@
+[
+	{
+		"img" : "img/gunung.jpg",
+		"judul" : "gunung"
+	},
+	{
+		"img" : "img/pantai.jpg",
+		"judul" : "pantai"
+	},
+	{
+		"img" : "img/jogja.jpg",
+		"judul" : "museum"
+	},
+	{
+		"img" : "img/rajaampat.jpg",
+		"judul" : "Jatim Park 2"
+	}
+]
