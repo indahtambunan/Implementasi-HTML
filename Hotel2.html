@@ -46,7 +46,7 @@
       </div>
         <p class="harga">Rp 709.253</p><br><br>
         <p class="malam">1 hari 1 malam</p><br>
-        <button class="button" name="button">Pesan</button>
+        <button class="button" id="myBtn1" name="button">Pesan</button>
     </div>
   </div>
 
@@ -65,7 +65,7 @@
       </div>
         <p class="harga">Rp 541.681</p><br><br>
         <p class="malam">1 hari 1 malam</p><br>
-        <button class="button" name="button">Pesan</button>
+        <button class="button" id="myBtn2" name="button">Pesan</button>
     </div>
   </div>
 
@@ -84,9 +84,60 @@
       </div>
         <p class="harga">Rp 649.000</p><br><br>
         <p class="malam">1 hari 1 malam</p><br>
-        <button class="button" name="button">Pesan</button>
+        <button class="button" id="myBtn3" name="button">Pesan</button>
     </div>
   </div>
+
+  <div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Pemesanan Hotel</h2>
+    </div>
+    <div class="modal-body">
+      <br>
+      <form class="form" action="#" method="post">
+        <label for="tamu">Jumlah Tamu</label>
+        <input type="number" name="tamu" value="" min="0" max="50">
+        <label for="kamar">Jumlah Kamar</label>
+        <input type="number" name="kamar" value="" min="0" max="50"><br><br>
+        <input type="submit" name="submit" value="Pesan"><br><br>
+      </form>
+    </div>
+  </div>
+
+  </div>
+
+  <script>
+  var modal = document.getElementById("myModal");
+
+  var btn1 = document.getElementById("myBtn1");
+  var btn2 = document.getElementById("myBtn2");
+  var btn3 = document.getElementById("myBtn3");
+
+  var span = document.getElementsByClassName("close")[0];
+
+  btn1.onclick = function() {
+    modal.style.display = "block";
+  }
+  btn2.onclick = function() {
+    modal.style.display = "block";
+  }
+  btn3.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 
 </body>
 </html>

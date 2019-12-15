@@ -13,7 +13,7 @@
    <a href="about.html">Tentang</a>
    <a href="kontak.html">Kontak</a>
    <a href="bantuan.html">Bantuan</a>
-   
+
 
 	</form>
    </div>
@@ -105,7 +105,7 @@
 </div>
 <div class="btn-more" id="btn-more">
     <a href="#">More...</a>
-</div>  
+</div>
 </div>
 
 <script src="js/jquery-3.4.1.min.js"></script>
@@ -127,12 +127,12 @@
             $("#btn-more").hide();
         }
 
-        var path = "json/item_"+hal+".json";
+        var path = "json/tema_"+hal+".json";
 
         $.ajax({
             url:path,
             type: 'GET',
-            dataType: 'json'
+            dataType: 'json',
         })
         .done(function(data){
             console.log("success");
@@ -147,7 +147,7 @@
              <div class="nama_tema">`+val.judul+`</div>
              </div>
              </div>
-             ` 
+             `;
          });
 
             $("#list_item").append(gabung);
