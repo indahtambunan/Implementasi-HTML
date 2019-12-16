@@ -33,11 +33,11 @@
   </center>
     <div class="form">
       <center>
-        <form action="profil.html">
+        <form class="" action="home.html" method="post">
           <input type="email" name="email" size="40" placeholder="Email" id="email" required><br><br>
           <input type="password" name="password" size="40" placeholder="Password" id="password" required><br><br>
-          <button type="submit" id="login" value="submit"><a style="text-decoration: none; color: black;" href="profil.html">SIGN IN</button></a>
-        </form> <br>
+          <input type="submit" name="submit" id="login" value="SIGN IN">
+        </form><br>
         <font color="white">Belum Memiliki Akun?</font> <a href="Register.html">
         <font color="blue">Daftar</font></a>
       </center>
@@ -128,71 +128,6 @@
 
 </div>
 <script src="js/jquery-3.4.1.min.js"></script>
-<script type="text/javascript">
-
-//modal untuk error form
-
-  function modalShow() {
-		$("#id_modal").show();
-		$("#id_modal").css('animation', 'show_modal');
-	}
-
-	function modalHide() {
-		$("#id_modal").css('animation', 'hide_modal');
-		setTimeout(function function_name() {
-			$("#id_modal").hide();
-		}, 300);
-	}
-
-	function show_error(pesan) {
-		$("#popup_error").find('b').html(pesan);
-		//$("#popup_error").css('animation', 'show_modal');
-		setTimeout(function function_name() {
-			$("#popup_error").slideDown('slow');
-		}, 300);
-
-	$("#close_error_form").click(function(event) {
-		$("#popup_error").css('animation', 'hide_modal');
-		setTimeout(function function_name() {
-			$("#popup_error").fadeOut("slow");
-		}, 300);
-	});
-
-	window.onclick = function(event) {
-		var modal = document.getElementById('popup_error');
-		if(event.target == modal){
-			$("#popup_error").css('animation', 'hide_modal');
-			setTimeout(function function_name() {
-				$("#popup_error").hide();
-			}, 300);
-		}
-	};
-}
-
-//validasi form
-	
-		$('#login').on('click', function(event) {
-				event.preventDefault();
-
-				var email = $("input[email='email']").val();
-				var password = $("input[name='password']").val();
-				var angka = /^\d+$/; //angka saja
-				var emailAtur = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
-				
-				if ( email == ""|| password == "" ) {
-					show_error('Harap isi dengan lengkap!');
-				}
-
-				else if (!namaAtur.test(username.length < 13)){
-					show_error("maksimal 12 karakter");
-				}
-				else if (password.length < 9) {
-					show_error("Password harus minimal 9 karakter");
-				}
-				else{
-					$("#login").off('click').trigger('click');
-				}
-		});
-</script>
+<script src="js/tes.js"></script>
 </body>
 </html>
