@@ -217,6 +217,10 @@ function validateForm() {
     alert("Konfirmasi password harus diisi");
     return false;
   }
+  if (d !== e) {
+    alert("Konfirmasi password tidak sama");
+    return false;
+  }
 }
 
 function validateLogin() {
