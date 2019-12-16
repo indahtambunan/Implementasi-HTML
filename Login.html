@@ -29,13 +29,13 @@
 
 <div class="bgimg">
   <center>
-    <h1>Login</h1>
+    <h1>Login</h1><br>
   </center>
     <div class="form">
       <center>
-        <form class="" action="home.html" method="post">
-          <input type="email" name="email" size="40" placeholder="Email" id="email" required><br><br>
-          <input type="password" name="password" size="40" placeholder="Password" id="password" required><br><br>
+        <form name="formlogin" action="home.html" onsubmit="return validateLogin()" method="post">
+          <input type="email" name="email" size="40" placeholder="Email" id="email"><br><br>
+          <input type="password" name="password" size="40" placeholder="Password" id="password"><br><br>
           <input type="submit" name="submit" id="login" value="SIGN IN">
         </form><br>
         <font color="white">Belum Memiliki Akun?</font> <a href="Register.html">

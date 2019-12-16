@@ -190,3 +190,52 @@ function MyModal() {
   }
 }
 }
+
+function validateForm() {
+  var a = document.forms["myForm"]["namadepan"].value;
+  var b = document.forms["myForm"]["namabelakang"].value;
+  var c = document.forms["myForm"]["email"].value;
+  var d = document.forms["myForm"]["password"].value;
+  var e = document.forms["myForm"]["passwordkonfirmasi"].value;
+  if (a == "" || a == null) {
+    alert("Nama depan harus diisi");
+    return false;
+  }
+  if (b == "" || b == null) {
+    alert("Nama belakang harus diisi");
+    return false;
+  }
+  if (c == "" || c == null) {
+    alert("Email harus diisi");
+    return false;
+  }
+  if (d == "" || d == null) {
+    alert("Password harus diisi");
+    return false;
+  }
+  if (e == "" || e == null) {
+    alert("Konfirmasi password harus diisi");
+    return false;
+  }
+}
+
+function validateLogin() {
+  var email = document.forms["formlogin"]["email"].value;
+  var pass = document.forms["formlogin"]["password"].value;
+  if (email == "" || email == null) {
+    alert("Harap isi email");
+    return false;
+  }
+  if (pass == "" || pass == null) {
+    alert("Harap isi password");
+    return false;
+  }
+  if (email !== "coba@email.com") {
+    alert("Email atau password anda salah");
+    return false;
+  }
+  if (pass !== "123") {
+    alert("Email atau password anda salah");
+    return false;
+  }
+}
