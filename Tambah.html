@@ -69,7 +69,7 @@
 
 
                 </div>
-             <a href="#"</a><button type="submit" name="button">Simpan</button>
+             <a href="#"</a><button type="submit" id="myBtn2" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
 
            </form>
@@ -103,7 +103,7 @@
 
 
                 </div>
-             <a href="#"</a><button type="button" name="button">Simpan</button>
+             <a href="#"</a><button type="button" id="myBtn1" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
            </form>
      </div>
@@ -129,10 +129,8 @@
                    <div class="caption">
                      <span id="description"></span>
                    </div>
-
-
                 </div>
-             <a href="#"</a><button type="button" name="button">Simpan</button>
+             <a href="#"</a><button type="button" id="myBtn3" name="button">Simpan</button>
              <a href="#"</a><button type="button" name="button">Batal</button>
            </form>
      </div>
@@ -141,10 +139,56 @@
 
 </div>
 
+<div id="myModal" class="modal">
+
+<div class="modal-content">
+  <div class="modal-header">
+    <span class="close">&times;</span>
+    <h2>Tambah Data</h2>
+  </div>
+  <div class="modal-body">
+    <br>
+    Data berhasil ditambahkan
+    <form class="form" action="Tambah.html" method="post">
+      <input type="submit" name="submit" value="OK"><br><br>
+    </form>
+  </div>
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn1.onclick = function() {
+  modal.style.display = "block";
+}
+btn2.onclick = function() {
+  modal.style.display = "block";
+}
+btn3.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/tes.js"></script>
+
 
 
 </body>

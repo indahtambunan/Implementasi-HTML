@@ -107,89 +107,89 @@ function Data(evt, cityName) {
 // 	}
 // });
 
-function modalShow() {
-	$("#id_modal").show();
-	$("#id_modal").css('animation-name', 'show_modal');
-	// $(".modal-content:first").css('animation-name', 'show_modal');
-}
-
-function modalHide() {
-	// $(".modal-content:first").css('animation-name', 'hide_modal');
-	$("#id_modal").css('animation-name', 'hide_modal');
-	setTimeout(function function_name() {
-		$("#id_modal").hide();
-	}, 300);
-}
-
-function show_error(pesan) {
-	$("#error_modal").find('b').html(pesan);
-	$("#error_modal").show();
-	$("#error_modal").css('animation-name', 'show_modal');
-
-	$("#close_error_form").click(function(event) {
-		// $("#error_modal").hide();
-		$("#error_modal").css('animation-name', 'hide_modal');
-		setTimeout(function function_name() {
-			$("#error_modal").hide();
-		}, 300);
-	});
-
-	window.onclick = function(event) {
-		var modal = document.getElementById('error_modal');
-		if(event.target == modal){
-			$("#error_modal").css('animation-name', 'hide_modal');
-			setTimeout(function function_name() {
-				$("#error_modal").hide();
-			}, 300);
-		}
-	};
-}
-
-//Validasi input kosong
-$.fn.validateEmpty = function () {
-	var form = this;
-
-	form.on('submit', function (event) {
-		event.preventDefault();
-		var inputan = form.find("input,select");
-		// console.log(inputan);
-		var kosong = false;
-		inputan.each(function(index, el) {
-			if ($(el).val() == "") {
-				kosong = true;
-			}
-		});
-
-		if(kosong){
-			show_error("Harap lengkapi data isian");
-		}
-		else{
-			form.off('submit').trigger('submit');
-		}
-	});
-
-function MyModal() {
-  var modal = document.getElementById("myModal");
-
-  var btn = document.getElementById("myBtn");
-
-  var span = document.getElementsByClassName("close")[0];
-
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
-
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-}
-}
+// function modalShow() {
+// 	$("#id_modal").show();
+// 	$("#id_modal").css('animation-name', 'show_modal');
+// 	// $(".modal-content:first").css('animation-name', 'show_modal');
+// }
+//
+// function modalHide() {
+// 	// $(".modal-content:first").css('animation-name', 'hide_modal');
+// 	$("#id_modal").css('animation-name', 'hide_modal');
+// 	setTimeout(function function_name() {
+// 		$("#id_modal").hide();
+// 	}, 300);
+// }
+//
+// function show_error(pesan) {
+// 	$("#error_modal").find('b').html(pesan);
+// 	$("#error_modal").show();
+// 	$("#error_modal").css('animation-name', 'show_modal');
+//
+// 	$("#close_error_form").click(function(event) {
+// 		// $("#error_modal").hide();
+// 		$("#error_modal").css('animation-name', 'hide_modal');
+// 		setTimeout(function function_name() {
+// 			$("#error_modal").hide();
+// 		}, 300);
+// 	});
+//
+// 	window.onclick = function(event) {
+// 		var modal = document.getElementById('error_modal');
+// 		if(event.target == modal){
+// 			$("#error_modal").css('animation-name', 'hide_modal');
+// 			setTimeout(function function_name() {
+// 				$("#error_modal").hide();
+// 			}, 300);
+// 		}
+// 	};
+// }
+//
+// //Validasi input kosong
+// $.fn.validateEmpty = function () {
+// 	var form = this;
+//
+// 	form.on('submit', function (event) {
+// 		event.preventDefault();
+// 		var inputan = form.find("input,select");
+// 		// console.log(inputan);
+// 		var kosong = false;
+// 		inputan.each(function(index, el) {
+// 			if ($(el).val() == "") {
+// 				kosong = true;
+// 			}
+// 		});
+//
+// 		if(kosong){
+// 			show_error("Harap lengkapi data isian");
+// 		}
+// 		else{
+// 			form.off('submit').trigger('submit');
+// 		}
+// 	});
+//
+// function MyModal() {
+//   var modal = document.getElementById("myModal");
+//
+//   var btn = document.getElementById("myBtn");
+//
+//   var span = document.getElementsByClassName("close")[0];
+//
+//   btn.onclick = function() {
+//     modal.style.display = "block";
+//   }
+//
+//   span.onclick = function() {
+//     modal.style.display = "none";
+//   }
+//
+//   window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//     }
+//   }
+// }
+// }
 
 function validateForm() {
   var a = document.forms["myForm"]["namadepan"].value;
