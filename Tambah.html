@@ -23,12 +23,10 @@
 
  <div class="nav">
    <a href="home.html">Beranda</a>
-   <a href="paketTour.html">Paket Tour</a>
+   <a href="pakettour.html">Paket Tour</a>
    <a href="Hotel1.html">Hotel</a>
    <a href="Pesawat1.html">Pesawat</a>
  </div>
-
-<br>
 
 <center><h1>Tambah Data</h1></center>
 
@@ -39,157 +37,119 @@
      <button class="tablinks" onclick="Data(event, 'Pesawat')">Data Pesawat</button>
      <button class="tablinks" onclick="Data(event, 'Hotel')">Data Hotel</button>
     </div>
-
-   <div id="Paket Tour" class="tabcontent">
-     <div class="form">
-           <form name="form-inline" action="#" onsubmit="return validateForm()">
-             <label for="nama">Nama Paket Tour</label><br>
-             <input type="text" name="namatour" placeholder="Nama Paket Tour" size="50px" id="inputtour"><br><br>
-             <label for="deskripsi">Deskripsi</label><br>
-             <textarea name="deskripsitour" rows="8" cols="80" id="inputtour"></textarea><br><br>
-             <label for="rute">Rute Perjalanan</label><br>
-             <textarea name="rute" rows="8" cols="80" id="inputtour"></textarea><br><br>
-             <label for="itinerary">Itinenary</label><br>
-             <textarea name="itinerary" rows="8" cols="80" id="inputtour"></textarea><br><br>
-             <label for="berangkat">Tanggal Berangkat</label><br>
-             <input type="date" name="berangkat"><br><br>
-             <label for="selesai">Tanggal Selesai</label><br>
-             <input type="date" name="selesai"><br><br>
-             <label for="harga">Harga</label><br>
-             <input type="text" name="hargatour" placeholder="Harga" size="50px" id="inputtour"><br><br>
-             <label for="gambartour">Gambar</label><br>
-             <div class="btn btn-primary">
-                <input type="file" id="imageBrowes"/>
-              </div>
-                <div id="imgPreview" class="thumbnail" style="display:none">
-                   <img class="img-responsive" id="targetImg" />
-                   <div class="caption">
-                     <span id="description"></span>
-                   </div>
-
-
-                </div>
-             <a href="#"</a><button type="submit" id="myBtn2" name="button">Simpan</button>
-             <a href="#"</a><button type="button" name="button">Batal</button>
-
-           </form>
-     </div>
-   </div>
-
-   <div id="Pesawat" class="tabcontent">
-     <div class="form">
-           <form class="form" action="#">
-             <label for="nama">Nama Maskapai</label><br>
-             <input type="text" name="nama" placeholder="Nama Maskapai" size="50px"><br><br>
-             <label for="dari">Dari</label><br>
-             <input type="text" name="dari" placeholder="Asal" size="50px"><br><br>
-             <label for="ke">Ke</label><br>
-             <input type="text" name="tujuan" placeholder="Tujuan" size="50px"><br><br>
-             <label for="berangkat">Jam Berangkat</label><br>
-             <input type="text" name="berangkat" placeholder="Jam Berangkat" size="50px"><br><br>
-             <label for="tiba">Jam Tiba</label><br>
-             <input type="text" name="tiba" placeholder="Jam Tiba" size="50px"><br><br>
-             <label for="harga">Harga</label><br>
-             <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
-             <label for="gambar">Gambar</label><br>
-             <div class="btn btn-primary">
-              <input type="file" id="imageBrowes"/>
-              </div>
-                <div id="imgPreview" class="thumbnail" style="display:none">
-                   <img class="img-responsive" id="targetImg" />
-                   <div class="caption">
-                     <span id="description"></span>
-                   </div>
-
-
-                </div>
-             <a href="#"</a><button type="button" id="myBtn1" name="button">Simpan</button>
-             <a href="#"</a><button type="button" name="button">Batal</button>
-           </form>
-     </div>
-   </div>
-
-   <div id="Hotel" class="tabcontent">
-     <div class="form">
-           <form class="form-inline" action="#">
-             <label for="nama">Nama Hotel</label><br>
-             <input type="text" name="nama" placeholder="Nama Hotel" size="50px"><br><br>
-             <label for="kota">Kota</label><br>
-             <input type="text" name="kota" placeholder="Nama Kota" size="50px"><br><br>
-             <label for="provinsi">Provinsi</label><br>
-             <input type="text" name="provinsi" placeholder="Nama Provinsi" size="50px"><br><br>
-             <label for="harga">Harga</label><br>
-             <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
-             <label for="gambar">Gambar</label><br>
-             <div class="btn btn-primary">
-              <input type="file" id="imageBrowes"/>
-              </div>
-                <div id="imgPreview" class="thumbnail" style="display:none">
-                   <img class="img-responsive" id="targetImg" />
-                   <div class="caption">
-                     <span id="description"></span>
-                   </div>
-                </div>
-             <a href="#"</a><button type="button" id="myBtn3" name="button">Simpan</button>
-             <a href="#"</a><button type="button" name="button">Batal</button>
-           </form>
-     </div>
-   </div>
-  </div>
-
-</div>
-
-<div id="myModal" class="modal">
-
-<div class="modal-content">
-  <div class="modal-header">
-    <span class="close">&times;</span>
-    <h2>Tambah Data</h2>
-  </div>
-  <div class="modal-body">
-    <br>
-    Data berhasil ditambahkan
-    <form class="form" action="Tambah.html" method="post">
-      <input type="submit" name="submit" value="OK"><br><br>
-    </form>
   </div>
 </div>
 
-<script>
-var modal = document.getElementById("myModal");
+<div class="row">
+  <div class="tabcontent" id="Paket Tour">
+    <div class="column" style="background-color:#ffffff;">
+      <form name="form-inline" class="form1" action="#" onsubmit="return validateForm()">
+        <label for="nama">Nama Paket Tour</label><br>
+        <input type="text" name="namatour" placeholder="Nama Paket Tour" size="20px" id="inputtour"><br><br>
+        <label for="deskripsi">Deskripsi</label><br>
+        <textarea name="deskripsitour" rows="8" cols="30" id="inputtour"></textarea><br><br>
+        <label for="rute">Rute Perjalanan</label><br>
+        <textarea name="rute" rows="8" cols="30" id="inputtour"></textarea><br><br>
+        <label for="itinerary">Itinenary</label><br>
+        <textarea name="itinerary" rows="8" cols="30" id="inputtour"></textarea><br><br>
+      </form>
+    </div>
+    <div class="column" style="background-color:#ffffff;">
+      <form name="form-inline" class="form2" action="#" onsubmit="return validateForm()">
+        <label for="berangkat">Tanggal Berangkat</label><br>
+        <input type="date" name="berangkat"><br><br>
+        <label for="selesai">Tanggal Selesai</label><br>
+        <input type="date" name="selesai"><br><br>
+        <label for="harga">Harga</label><br>
+        <input type="text" name="hargatour" placeholder="Harga" size="50px" id="inputtour"><br><br>
+        <label for="gambartour">Gambar</label><br>
+        <div class="btn btn-primary">
+          <input type="file" id="imageBrowes"/>
+        </div>
+           <div id="imgPreview" class="thumbnail" style="display:none">
+              <img class="img-responsive" id="targetImg" />
+              <div class="caption">
+                <span id="description"></span>
+              </div>
+           </div>
+        <a href="#"</a><button type="submit" id="myBtn2" name="button">Simpan</button>
+        <a href="#"</a><button type="button" name="button">Batal</button>
+      </form>
+    </div>
+  </div>
+</div>
 
-var btn1 = document.getElementById("myBtn1");
-var btn2 = document.getElementById("myBtn2");
-var btn3 = document.getElementById("myBtn3");
+<div class="row">
+  <div class="tabcontent" id="Pesawat">
+    <div class="column" style="background-color:#ffffff;">
+      <form name="form-inline" class="form3" action="#" onsubmit="return validateForm()">
+        <label for="nama">Nama Maskapai</label><br>
+        <input type="text" name="nama" placeholder="Nama Maskapai" size="50px"><br><br>
+        <label for="dari">Dari</label><br>
+        <input type="text" name="dari" placeholder="Asal" size="50px"><br><br>
+        <label for="ke">Ke</label><br>
+        <input type="text" name="tujuan" placeholder="Tujuan" size="50px"><br><br>
+        <label for="berangkat">Jam Berangkat</label><br>
+        <input type="text" name="berangkat" placeholder="Jam Berangkat" size="50px"><br><br>
+      </form>
+    </div>
+    <div class="column" style="background-color:#ffffff;">
+      <form name="form-inline" class="form4" action="#" onsubmit="return validateForm()">
+        <label for="tiba">Jam Tiba</label><br>
+        <input type="text" name="tiba" placeholder="Jam Tiba" size="50px"><br><br>
+        <label for="harga">Harga</label><br>
+        <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
+        <label for="gambar">Gambar</label><br>
+        <div class="btn btn-primary">
+         <input type="file" id="imageBrowes"/>
+         </div>
+           <div id="imgPreview" class="thumbnail" style="display:none">
+              <img class="img-responsive" id="targetImg" />
+              <div class="caption">
+                <span id="description"></span>
+              </div>
+           </div>
+        <a href="#"</a><button type="button" id="myBtn1" name="button">Simpan</button>
+        <a href="#"</a><button type="button" name="button">Batal</button>      </form>
+    </div>
+  </div>
+</div>
 
-var span = document.getElementsByClassName("close")[0];
-
-btn1.onclick = function() {
-  modal.style.display = "block";
-}
-btn2.onclick = function() {
-  modal.style.display = "block";
-}
-btn3.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
+<div class="row">
+  <div class="tabcontent" id="Hotel">
+    <div class="column" style="background-color:#ffffff;">
+      <form name="form-inline" class="form1" action="#" onsubmit="return validateForm()">
+        <label for="nama">Nama Hotel</label><br>
+        <input type="text" name="nama" placeholder="Nama Hotel" size="50px"><br><br>
+        <label for="kota">Kota</label><br>
+        <input type="text" name="kota" placeholder="Nama Kota" size="50px"><br><br>
+        <label for="provinsi">Provinsi</label><br>
+        <input type="text" name="provinsi" placeholder="Nama Provinsi" size="50px"><br><br>
+      </form>
+    </div>
+    <div class="column" style="background-color:#ffffff;">
+      <form name="form-inline" class="form2" action="#" onsubmit="return validateForm()">
+        <label for="harga">Harga</label><br>
+        <input type="text" name="harga" placeholder="Harga" size="50px"><br><br>
+        <label for="gambar">Gambar</label><br>
+        <div class="btn btn-primary">
+         <input type="file" id="imageBrowes"/>
+         </div>
+           <div id="imgPreview" class="thumbnail" style="display:none">
+              <img class="img-responsive" id="targetImg" />
+              <div class="caption">
+                <span id="description"></span>
+              </div>
+           </div>
+        <a href="#"</a><button type="button" id="myBtn3" name="button">Simpan</button>
+        <a href="#"</a><button type="button" name="button">Batal</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/tes.js"></script>
-
-
 
 </body>
 </html>
